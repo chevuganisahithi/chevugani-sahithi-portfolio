@@ -32,6 +32,9 @@ export function Hero() {
           <h1 id="hero-title" className="text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-6xl">
             Building the Future <span className="text-primary">with AI</span>
           </h1>
+          <p className="mt-4 font-heading text-base font-medium tracking-tight text-foreground/70 sm:text-lg">
+            Explore my work, projects and journey in technology.
+          </p>
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             {"Hi, I'm "}
             <span className="font-semibold text-foreground">{profile.name}</span>
