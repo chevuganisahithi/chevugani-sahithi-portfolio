@@ -1,9 +1,10 @@
-import { ArrowRight, Brain, Code2, Sparkles } from 'lucide-react'
+import { ArrowRight, Brain, Code2, Code2 as Github, Sparkles, UserRound as Linkedin } from 'lucide-react'
+import { profile } from '@/lib/profile'
 
 const focusAreas = [
-  { icon: Brain, title: 'Machine Learning', text: 'Models that learn from data' },
-  { icon: Sparkles, title: 'Artificial Intelligence', text: 'Intelligent, useful products' },
-  { icon: Code2, title: 'Software & UI/UX', text: 'Clean code, thoughtful design' },
+  { icon: Code2, title: 'Software Engineering', text: 'Data structures, OOP and clean code' },
+  { icon: Brain, title: 'Applied AI & ML', text: 'Classification, preprocessing, evaluation' },
+  { icon: Sparkles, title: 'Web & UI/UX', text: 'Responsive, user-friendly interfaces' },
 ]
 
 export function Hero() {
@@ -26,16 +27,19 @@ export function Hero() {
         <div className="animate-in fade-in slide-in-from-bottom-6 duration-700">
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm font-medium text-muted-foreground">
             <span className="size-2 rounded-full bg-primary" aria-hidden="true" />
-            CSE Student · AI &amp; Machine Learning
+            {profile.headline}
           </p>
           <h1 id="hero-title" className="text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-6xl">
             Building the Future <span className="text-primary">with AI</span>
           </h1>
+          <p className="mt-4 font-heading text-base font-medium tracking-tight text-foreground/70 sm:text-lg">
+            Explore my work, projects and journey in technology.
+          </p>
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             {"Hi, I'm "}
-            <span className="font-semibold text-foreground">[Your Name]</span>
+            <span className="font-semibold text-foreground">{profile.name}</span>
             {
-              ', a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. I enjoy turning ideas into intelligent, well-designed applications.'
+              ', an Integrated M.Tech Computer Science and Engineering student specializing in Artificial Intelligence at VIT Bhopal University. I build practical, user-friendly applications with software engineering and applied AI.'
             }
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
@@ -51,6 +55,26 @@ export function Hero() {
               className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
             >
               Contact Me
+            </a>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center gap-5 text-sm font-medium">
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Github className="size-4" aria-hidden="true" />
+              GitHub
+            </a>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Linkedin className="size-4" aria-hidden="true" />
+              LinkedIn
             </a>
           </div>
         </div>

@@ -8,6 +8,7 @@ const navItems = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
   { href: '#education', label: 'Education' },
   { href: '#contact', label: 'Contact' },
 ]
@@ -41,9 +42,9 @@ export function SiteHeader() {
             aria-hidden="true"
             className="flex size-8 items-center justify-center rounded-lg bg-primary text-sm text-primary-foreground"
           >
-            YN
+            CS
           </span>
-          <span>[Your Name]</span>
+          <span>Chevugani Sahithi</span>
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">
