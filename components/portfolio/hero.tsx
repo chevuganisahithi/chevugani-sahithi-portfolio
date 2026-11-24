@@ -33,7 +33,7 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             {"Hi, I'm "}
-            <span className="font-semibold text-foreground">[Your Name]</span>
+            <span className="font-semibold text-foreground">Chevugani Sahithi</span>
             {
               ', a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. I enjoy turning ideas into intelligent, well-designed applications.'
             }

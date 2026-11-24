@@ -10,9 +10,9 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Computer Science Engineering Student — AI & ML',
+  title: 'Chevugani Sahithi | Computer Science Engineering Student — AI & ML',
   description:
-    'Personal portfolio of a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning.',
+    'Personal portfolio of Chevugani Sahithi, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning.',
   generator: 'v0.app',
   icons: {
     icon: [

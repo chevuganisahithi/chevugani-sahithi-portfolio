@@ -41,9 +41,9 @@ export function SiteHeader() {
             aria-hidden="true"
             className="flex size-8 items-center justify-center rounded-lg bg-primary text-sm text-primary-foreground"
           >
-            YN
+            CS
           </span>
-          <span>[Your Name]</span>
+          <span>Chevugani Sahithi</span>
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">

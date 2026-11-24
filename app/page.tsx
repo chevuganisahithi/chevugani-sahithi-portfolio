@@ -22,7 +22,7 @@ export default function Page() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-5 text-sm text-muted-foreground md:flex-row md:px-8">
           <p>
             {'© '}
-            {new Date().getFullYear()} [Your Name]
+            {new Date().getFullYear()} Chevugani Sahithi
           </p>
           <p>Building the Future with AI</p>
         </div>
