@@ -1,4 +1,4 @@
-import { GraduationCap, Lightbulb, Target } from 'lucide-react'
+import { GraduationCap, Lightbulb, Puzzle } from 'lucide-react'
 import { Reveal } from './reveal'
 import { SectionHeading } from './section-heading'
 
@@ -6,17 +6,17 @@ const highlights = [
   {
     icon: GraduationCap,
     title: 'Student',
-    text: 'Computer Science Engineering with a specialization in AI & ML.',
+    text: 'Integrated M.Tech in CSE (Artificial Intelligence) at VIT Bhopal University.',
   },
   {
     icon: Lightbulb,
     title: 'Interests',
-    text: 'Machine learning, intelligent applications and user-centered design.',
+    text: 'Software engineering, applied AI, machine learning and user-friendly applications.',
   },
   {
-    icon: Target,
-    title: 'Goal',
-    text: '[Add your career goal — e.g. the kind of role or problems you want to work on.]',
+    icon: Puzzle,
+    title: 'Approach',
+    text: 'Analytical problem-solving and practical solutions through technology.',
   },
 ]
 
@@ -29,16 +29,18 @@ export function About() {
         <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_1fr]">
           <Reveal className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              {"I'm a Computer Science Engineering student specializing in "}
+              {'I am an '}
               <span className="font-semibold text-foreground">
-                Artificial Intelligence and Machine Learning
+                Integrated M.Tech Computer Science and Engineering
               </span>
-              . I like exploring how data and intelligent systems can be used to solve real-world
-              problems, and I care about building them in a way that people find simple to use.
+              {' student specializing in '}
+              <span className="font-semibold text-foreground">Artificial Intelligence</span>
+              {' at VIT Bhopal University.'}
             </p>
             <p>
-              [Add a few sentences about yourself — what got you into AI, what you enjoy working on,
-              and what you are currently learning.]
+              I am interested in software engineering, applied AI, machine learning and building
+              user-friendly applications. I enjoy analytical problem-solving and developing
+              practical solutions through technology.
             </p>
           </Reveal>
 

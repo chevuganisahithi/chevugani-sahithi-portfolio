@@ -1,29 +1,44 @@
 import Image from 'next/image'
 import { Code2 as Github, ExternalLink } from 'lucide-react'
+import { profile } from '@/lib/profile'
 import { Reveal } from './reveal'
 import { SectionHeading } from './section-heading'
 
 const projects = [
   {
-    title: 'Credit Card Fraud Detection Using Machine Learning',
+    title: 'Credit Card Fraud Detection System',
     description:
-      'A machine learning project that analyzes credit card transactions to classify them as legitimate or potentially fraudulent.',
+      'Built a classification workflow to identify potentially fraudulent transactions, including data preprocessing and model evaluation.',
     image: '/projects/fraud-detection.png',
-    tags: ['Machine Learning', 'Classification', 'Python'],
+    tags: ['Python', 'Machine Learning', 'Pandas', 'NumPy'],
   },
   {
-    title: 'AI House Design',
+    title: 'AI Civic Portal',
     description:
-      'An AI-driven project that explores generating and visualizing house design ideas, combining intelligent systems with design thinking.',
-    image: '/projects/ai-house-design.png',
-    tags: ['Artificial Intelligence', 'Design', 'UI/UX'],
+      'Developed an AI-powered civic information platform intended to make public-service information easier to access through an interactive interface.',
+    image: '/projects/ai-civic-portal.png',
+    tags: ['Python', 'Web Development', 'AI'],
   },
   {
-    title: 'Merchant Intelligence Copilot',
+    title: 'Delivery Agent Management System',
     description:
-      'An AI copilot concept for merchants that helps surface business insights and answer questions about their store.',
-    image: '/projects/merchant-copilot.png',
-    tags: ['Artificial Intelligence', 'Copilot', 'Analytics'],
+      'Created a web application interface for managing delivery assignments and presenting task-tracking information.',
+    image: '/projects/delivery-agent.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    title: 'Automated Bill Generator',
+    description:
+      'Built a billing application designed to generate invoices and automate calculations.',
+    image: '/projects/bill-generator.png',
+    tags: ['Python', 'Java'],
+  },
+  {
+    title: 'Personal Portfolio & Front-End Mini Projects',
+    description:
+      'Designed a responsive portfolio and supporting interfaces, including a tourism landing page, image slider, calculator, greeting generator and interactive color-change button.',
+    image: '/projects/frontend-projects.png',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Bulma CSS'],
   },
 ]
 
@@ -35,7 +50,7 @@ export function Projects() {
           id="projects-title"
           eyebrow="Projects"
           title="Selected work"
-          description="A few projects where I applied AI and machine learning to real problems."
+          description="Projects across machine learning, applied AI and web development."
         />
 
         <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -43,7 +58,7 @@ export function Projects() {
             <Reveal
               as="li"
               key={project.title}
-              delay={i * 120}
+              delay={(i % 3) * 120}
               className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/10"
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-accent">
@@ -56,7 +71,11 @@ export function Projects() {
                 />
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <ul className="mb-4 flex flex-wrap gap-2" aria-label="Topics">
+                <h3 className="text-xl font-semibold leading-snug">{project.title}</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">
+                  {project.description}
+                </p>
+                <ul className="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
                   {project.tags.map((tag) => (
                     <li
                       key={tag}
@@ -66,14 +85,7 @@ export function Projects() {
                     </li>
                   ))}
                 </ul>
-                <h3 className="text-xl font-semibold leading-snug">{project.title}</h3>
-                <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-                <p className="mt-3 text-sm italic text-muted-foreground">
-                  [Add details: tools used, your role and key outcomes.]
-                </p>
-                <div className="mt-6 flex gap-3 border-t border-border pt-5">
+                <div className="mt-6 flex flex-wrap gap-3 border-t border-border pt-5">
                   <span
                     className="inline-flex items-center gap-2 rounded-full border border-dashed border-border px-4 py-2 text-sm text-muted-foreground"
                     title="Add your GitHub repository link"
@@ -92,6 +104,26 @@ export function Projects() {
               </div>
             </Reveal>
           ))}
+          <Reveal
+            as="li"
+            delay={240}
+            className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-dashed border-primary/30 bg-accent/40 p-8 text-center"
+          >
+            <span className="flex size-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+              <Github className="size-6" aria-hidden="true" />
+            </span>
+            <p className="font-heading text-lg font-semibold">More on GitHub</p>
+            <p className="text-sm text-muted-foreground">Explore my repositories and ongoing work.</p>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-colors hover:bg-primary"
+            >
+              View GitHub Profile
+              <ExternalLink className="size-4" aria-hidden="true" />
+            </a>
+          </Reveal>
         </ul>
       </div>
     </section>
